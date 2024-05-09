@@ -1,0 +1,46 @@
+.code-container {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    background-color: #0d1117;
+    border-radius: 10px; /* Adjust border-radius to change the roundness */
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c9d1d9;
+}
+
+.line-numbers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3em; /* Adjust width to fit line numbers */
+    padding: 20px 0;
+    text-align: right;
+    color: #6e7681;
+    overflow: hidden;
+}
+
+.line-numbers span {
+    display: block;
+    padding-right: 10px;
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 1;
+}

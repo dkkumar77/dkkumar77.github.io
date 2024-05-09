@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deepak</title>
+        <link rel="stylesheet" href="codeblock.css">
+                <style>
+            body {
+                font-family: Cambria, serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f7e7ce;
+                text-align: center;
+            }
+            /* Example styling for anchor links */
+            a {
+                display: block;
+                margin-bottom: 10px;
+                color: blue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+
+            .padded-image {
+                margin-left: 400px;
+            }
+
+            header {
+                background-image: url('stock.jpg');
+                background-size: cover;
+                font-family: 'Franklin Gothic Medium';
+                font-size: 25pt;
+                padding-bottom: 100px;
+                text-align: auto fit-content;
+                background-position: top center;
+                color: white;
+                padding-top: 150px;
+                height: 140px;
+                text-align: center;
+                border: 1px solid #ccc;
+                /* border-radius: 30px;*/
+            }
+
+            nav.nav-bar {
+                padding: 0;
+                height: 30px;
+                background-color: #f7e7ce;
+                border: 1px solid rgb(165, 154, 154);
+                border-radius: 75px;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 10px 0;
+                text-align: left;
+
+                z-index: 1000; /* Make sure it's above other content */
+            }
+            .menu a {
+                font-family: Cambria, serif;
+                color: black;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: inline-block;
+                height: auto;
+                border-color: solid black;
+            }
+
+            .space {
+
+                display: flex;
+                top: 100;
+                left: 0;
+                width: 100%;
+                height: fit-content + 10000px;
+                background-color: #F5F5F5;
+                text-emphasis-color: red;
+                padding: 0;
+                text-align: left;
+                font-family: Cambria, serif;
+                margin: 0;
+                text-align: center;
+                text-shadow: black;
+
+            }
+
+
+            .column {
+                display: flex;
+
+                padding: 10px;
+
+                text-align: top;
+            }
+
+            .info {
+
+                top: 100;
+                left: 0;
+                width: 100%;
+                height: 300px;
+                background-color: gray;
+                padding: 10px 0;
+                text-align: left;
+
+
+            }
+
+            .image-center{
+                padding-top: 15px;
+                padding-left: 200px;
+            }
+
+            nav,
+            main,
+            section,
+            aside {
+                width: 90%; /* Adjusted width for better responsiveness */
+                max-width: 800px; /* Limiting maximum width for better readability */
+                margin: 20px auto; /* Centering and adding space between elements */
+                padding: 20px 20px 20px 50px;
+                height: auto fit-content + 1000px;
+                font-size: 12.5pt;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: white;
+                /*border: 1px solid rgb(165, 154, 154);*/
+                border-radius: 75px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="menu">
+            <b>
+                <h4>
+
+                    <a href="#Education">Education</a>
+                    <a href="#Projects">Projects</a>
+                    <a href="#Work Experience">Work Experience</a>
+                    <a href="#Other">Other</a>
+                </h4>
+            </b>
+        </div>
+
+        <header>
+
+            <h1>Deepak Kumar</h1>
+        </header>
+
+        <div class="space">
+
+            <div class="column">
+                <img src="pic.jpg" alt="Me" width="300" height="400" class="padded-image">
+            </div>
+
+            <div class="column">
+                <br><h2>About Me:</h2>
+                <p>Computer Science graduate with a keen interest in network security, database
+                                        management, and cloud computing. Proficient in AWS for deploying applications
+                                        and implementing security measures. Seeking career opportunities to leverage
+                                        my skills in a dynamic work environment etc. etc. etc.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <nav>
+            <h2 id="Education">Education</h2>
+
+            George Mason University Graduate of 2023
+                            B.S in Computer Science
+
+            <h3>Certifications</h3>
+
+            AWS Cloud Practicioner (June 2023)<br>
+            AWS Solutions Architect (July 2023)<br>
+            CompTIA Security+ (March 2024)<br>
+            CompTIA Network+ (Est. May 2024)<br><br><br>
+
+
+        </nav>
+
+        <section>
+            <h2 id="Projects">Projects</h2>
+
+            <h3>Banking App</h3>
+
+            <li>Designed the development of a desktop application enabling
+                                                        simulation of bank transactions such as deposits, withdrawals, and
+                                                        transfers among users. Implemented a secure user registration
+                                                        system with username, email, passwords and utilizing BCrypt to hash
+                                                        sensitive data.</li>
+
+            <li>Leveraged an agile workflow methodology in conjunction with Git
+                                                        versioning system to update and enhance applications.
+            </li>
+            <li>Led the construction of a banking application hosted on AWS,
+                                                        encompassing the configuration of an AWS NoSQL database.
+            </li>
+            <li>
+                Implemented fuzz testing to subject code to various inputs to identify
+                                                        vulnerabilities.
+            </li>
+
+
+            <h3>Message Encryptor</h3>
+
+            <li>
+                Desktop solution enabling users to securely send and receive
+                                messages through the generation of keys.</li>
+            <li>
+                Storage of metadata to facilitate efficient search/retrieval of
+                                information.</li>
+            <li>Emphasized on the perseverance of data integrity and confidentiality
+                                through implementation of encryption and secure channels.
+            </li>
+            <li></li>
+            <li>
+                Constructed a back end solution using MongoDB to store messages
+                                alongside with keys for message retrieval.
+                                
+            </li>
+
+        
+            <img src="msencrypt.jpg"  width="400" height="300" class="image-center" >
+
+
+
+            <h3>DNS Resolver</h3>
+
+
+            <li>
+                Created a solution that has a similar functionality to nslookup in
+                                order to retrieve DNS type A records.
+            </li>
+            <li>
+                Generated packets in accordance to RFC 1035 to send to Google’s
+                                DNS server.</li>
+            <li>
+                Structured a concise output of all records for a given subdomain
+            </li>
+            <br><br>
+            <h3>
+                AWS Web Hosting Security Project
+            </h3>
+
+            <li>
+                Utilized AWS Route53 in order to register a domain name while
+                creating an alias to point to an S3 bucket that stores static website
+                content.
+            </li>
+            <li>
+                Employed bucket versioning to seamlessly update content.
+            </li>
+            <br><br>
+            <h3>Network Security Analysis</h3>
+
+            <li>
+                Configured Ubuntu Server and Kali Linux to simulate network
+                environments for communication analysis.
+            </li>
+            <li>
+                Utilized WireShark to monitor traffic between the servers, identifying
+                potential security vulnerabilities and malicious activity.
+            </li>
+            <li>
+                Utilized passive reconnaissance tools to gather information about the
+                other Virtual Machine, allowing for the exploration of potential attack
+                vectors and security weaknesses.
+            </li>
+            <li>
+                Used VirusTotal to conduct comprehensive file analysis, identifying
+                security vulnerabilities and potential threats within files exchanged
+                between the servers.
+            </li>
+
+            <br><br>
+            <h3>S3 Bucket Transfer Project</h3>
+            <br>
+
+            <li>
+                Utilized python libraries in order to create, configure, and upload to
+                S3 buckets.
+            </li>
+            <li>
+                Implemented encryption mechanisms such as SSE-S3 and KMS for
+                data security.
+            </li>
+
+         
+
+            <br><br>test test test test<br><br>
+        </section>
+
+        <section>
+            <h2 id="Work Experience">Work Experience</h2>
+        </section>
+
+        <aside>
+            <h2 id="Other">Other</h2>
+        </aside>
+
+        <footer></footer>
+
+    </body>
+
+    <body>
+        <div class="space">
+
+            <b>Deepak Kumar</b>
+        </div>
+    </body>
+</html>
