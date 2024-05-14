@@ -121,6 +121,12 @@
             }
 
 
+            .centered-image {
+                 display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             nav,
             main,
             section,
@@ -131,11 +137,18 @@
                 padding: 20px 20px 20px 50px;
                 height: auto fit-content + 1000px;
                 font-size: 12.5pt;
+                display: block;
+                
                 font-family: 'Courier New', Courier, monospace;
                 background-color: white;
                 /*border: 1px solid rgb(165, 154, 154);*/
                 border-radius: 75px;
                 text-align: left;
+            }
+
+            .section a{
+                justify-content: center;;
+
             }
         </style>
     </head>
@@ -213,9 +226,9 @@
                 Parses .json file for real-time updates on the exchange range market.
             </li>
             <br>
-            <center>
-            <img src="sample.gif" width="600px" height="300px">
-        </center>
+            <a>
+            <img src="sample.gif" width="600px" height="300px"  class="centered-image">
+            </a>
             <h3>Banking App</h3>
 
             <li>Designed the development of a desktop application enabling
@@ -247,7 +260,6 @@
             <li>Emphasized on the perseverance of data integrity and confidentiality
                                 through implementation of encryption and secure channels.
             </li>
-            <li></li>
             <li>
                 Constructed a back end solution using MongoDB to store messages
                                 alongside with keys for message retrieval.
@@ -255,10 +267,10 @@
             </li>
 
         <br>
-        <center>
-            <img src="MessageEncryptor.gif" width="400px" height="300px">
+     
+            <img src="MessageEncryptor.gif" width="400px" height="300px"  class="centered-image">
 
-        </center>
+
             <h3>DNS Resolver</h3>
 
 
