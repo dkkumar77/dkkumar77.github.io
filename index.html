@@ -7,10 +7,9 @@
         <link rel="stylesheet" href="codeblock.css">
                 <style>
             body {
-                font-family: Cambria, serif;
+                font-family: 'Courier New', Courier, monospace;
                 margin: 0;
                 padding: 0;
-                
                 background-color: #f7e7ce;
                 text-align: center;
             }
@@ -122,18 +121,21 @@
 
 
             .centered-image {
-                 display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%; 
+            height: auto;
+}
+
 
             nav,
             main,
             section,
             aside {
-                width: 90%; /* Adjusted width for better responsiveness */
-                max-width: 800px; /* Limiting maximum width for better readability */
-                margin: 20px auto; /* Centering and adding space between elements */
+                width: 90%; 
+                max-width: 800px; 
+                margin: 20px auto; 
                 padding: 20px 20px 20px 50px;
                 height: auto fit-content + 1000px;
                 font-size: 12.5pt;
@@ -170,26 +172,23 @@
 
             <h1>Deepak Kumar</h1>
         </header>
-
-        <div class="space">
-
-            <div class="column">
-                <img src="pic.jpg" alt="Me" width="300" height="400" class="padded-image">
+        <body>
+            <div class="content">
+                <div class="image-column">
+                    <img src="pic.jpg" alt="Me" width="300" height="400" class="padded-image">
+                </div>
+                <div class="message-column">
+                    <h2>About Me:</h2>
+                    <p>
+                        Computer Science graduate with a keen interest in network security, database
+                        management, and cloud computing. Proficient in AWS for deploying applications
+                        and implementing security measures. Seeking career opportunities to leverage
+                        my skills in a dynamic work environment etc. etc. etc.
+                    </p>
+                </div>
             </div>
-
-            <div class="column">
-                <h2>About Me:</h2>
-                <p>
-                    Computer Science graduate with a keen interest in network security, database
-                    management, and cloud computing. Proficient in AWS for deploying applications
-                    and implementing security measures. Seeking career opportunities to leverage
-                    my skills in a dynamic work environment etc. etc. etc.
-                </p>
-            </div>
-
-
-        </div>
-
+        </body>
+        
 
         <nav>
             <h2 id="Education">Education</h2>
