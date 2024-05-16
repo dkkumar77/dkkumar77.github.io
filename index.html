@@ -10,17 +10,29 @@
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            background-color: #f7e7ce;
+            background-image: url('testpic.jpg');            
+            
+            background-repeat: repeat 2;
+            background-position: center;
             text-align: center;
         }
 
+        header h1{
+            font-family: 'Fira Code', monospace;
+
+
+        }
+
+
+        
         header {
-            background-image: url('stock.jpg');
+            background-image: url('testpic.jpg');
             background-size: cover;
             background-position: top center;
-            color: white;
+            color: lightsalmon;
+            letter-spacing: 10px;
             font-family: 'Franklin Gothic Medium', sans-serif;
-            font-size: 25pt;
+            font-size: 40pt;
             padding: 150px 0 100px;
             border: 1px solid #ccc;
         }
@@ -34,13 +46,14 @@
             background-color: white;
             padding: 10px 0;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .menu a {
             font-family: Cambria, serif;
             color: black;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 20px 30px;
             display: inline-block;
         }
 
@@ -52,12 +65,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 50px;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            padding: 20px;
+            height: 60vh; 
+            background-color: white;
         }
 
         .image-column,
         .message-column {
             flex: 1;
+            padding: 20px;
+            font-size: 15px;
+            justify-content: center;
+            font-family: 'Fira Code', monospace;
             padding: 20px;
         }
 
@@ -66,6 +87,15 @@
             margin: 0 auto;
             max-width: 100%;
             height: auto;
+        }
+
+
+        footer {
+            padding: 20px;
+            background-color: #f1f1f1;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
         }
 
         nav,
@@ -80,6 +110,13 @@
             background-color: white;
             border-radius: 20px;
             text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a,
+        section a,
+        aside a {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -92,12 +129,17 @@
             <a href="#Projects">Projects</a>
             <a href="#WorkExperience">Work Experience</a>
             <a href="#Other">Other</a>
+            <a href="Deepak_Kumar_Resume.pdf" class= "resume-link" download>
+                Resume
+                <img src="download.png" alt="Download" height="20px">
+            </a>
+            
         </h4>
     </b>
 </div>
 
 <header>
-    <h1>Deepak Kumar</h1>
+    <h1>Deepak Kumar </h1>
 </header>
 
 <div class="content">
@@ -179,12 +221,10 @@
         <li>Implemented encryption mechanisms such as SSE-S3 and KMS for data security.</li>
     </ul>
 
-    <!-- Add more projects with descriptions as needed -->
 </section>
 
 <section>
     <h2 id="WorkExperience">Work Experience</h2>
-    <!-- Work experience details -->
 </section>
 
 <aside>
@@ -201,7 +241,8 @@
     </ul>
 </aside>
 
-<footer></footer>
-
+<footer>
+    &copy; 2024 Deepak Kumar. All rights reserved.
+</footer>
 </body>
 </html>
