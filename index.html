@@ -1,378 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Deepak</title>
-        <link rel="stylesheet" href="codeblock.css">
-                <style>
-            body {
-                font-family: 'Courier New', Courier, monospace;
-                margin: 0;
-                padding: 0;
-                background-color: #f7e7ce;
-                text-align: center;
-            }
-            /* Example styling for anchor links */
-            a {
-                display: block;
-                margin-bottom: 10px;
-                color: blue;
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak</title>
+    <link rel="stylesheet" href="codeblock.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f7e7ce;
+            text-align: center;
+        }
 
+        header {
+            background-image: url('stock.jpg');
+            background-size: cover;
+            background-position: top center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', sans-serif;
+            font-size: 25pt;
+            padding: 150px 0 100px;
+            border: 1px solid #ccc;
+        }
 
-            .padded-image {
-                margin-left: 0px;
-                justify-content: center;
-            }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            padding: 10px 0;
+            z-index: 1000;
+        }
 
-            header {
-                background-image: url('stock.jpg');
-                background-size: cover;
-                font-family: 'Franklin Gothic Medium';
-                font-size: 25pt;
-                padding-bottom: 100px;
-                text-align: auto fit-content;
-                background-position: top center;
-                color: white;
-                padding-top: 150px;
-                height: 90px;
+        .menu a {
+            font-family: Cambria, serif;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
 
-                text-align: center;
-                border: 1px solid #ccc;
-                /* border-radius: 30px;*/
-            }
+        .menu a:hover {
+            text-decoration: underline;
+        }
 
-            nav.nav-bar {
-                padding: 0;
-                height: 20px;
-                background-color: #f7e7ce;
-                border: 1px solid rgb(165, 154, 154);
-                border-radius: 75px;
-            }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
 
-            .menu {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 50px;
-                background-color: white;
-                padding: 10px 0;
-                text-align: left;
+        .image-column,
+        .message-column {
+            flex: 1;
+            padding: 20px;
+        }
 
-                z-index: 1000; /* Make sure it's above other content */
-            }
-            .menu a {
-                font-family: Cambria, serif;
-                color: black;
-                text-decoration: none;
-                padding: 10px 20px;
-                display: inline-block;
-                height: auto;
-                border-color: solid black;
-            }
-
-            .space {
-
-                display: flex;
-                top: 100;
-                left: 0;
-                width: 100%;
-                height: fit-content + 10000px;
-                background-color: #F5F5F5;
-                text-emphasis-color: red;
-                padding: 0;
-                text-align: left;
-                font-family: Cambria, serif;
-                margin: 0;
-                text-align: center;
-                text-shadow: black;
-
-            }
-
-
-            .column {
-
-                padding: 10px;
-
-                text-align: center;
-
-                
-            }
-
-
-            .info {
-
-                top: 100;
-                left: 0;
-                width: 100%;
-                height: 300px;
-                background-color: gray;
-                padding: 10px 0;
-                text-align: left;
-
-
-            }
-
-
-            .centered-image {
+        .centered-image {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%; 
+            margin: 0 auto;
+            max-width: 100%;
             height: auto;
-}
+        }
 
+        nav,
+        main,
+        section,
+        aside {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 12.5pt;
+            background-color: white;
+            border-radius: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
 
-            nav,
-            main,
-            section,
-            aside {
-                width: 90%; 
-                max-width: 800px; 
-                margin: 20px auto; 
-                padding: 20px 20px 20px 50px;
-                height: auto fit-content + 1000px;
-                font-size: 12.5pt;
-                display: block;
-                
-                font-family: 'Courier New', Courier, monospace;
-                background-color: white;
-                border-radius: 75px;
-                text-align: left;
-            }
+<div class="menu">
+    <b>
+        <h4>
+            <a href="#Education">Education</a>
+            <a href="#Projects">Projects</a>
+            <a href="#WorkExperience">Work Experience</a>
+            <a href="#Other">Other</a>
+        </h4>
+    </b>
+</div>
 
-            .section a{
-                justify-content: center;;
+<header>
+    <h1>Deepak Kumar</h1>
+</header>
 
-            }
-        </style>
-    </head>
-    <body>
+<div class="content">
+    <div class="image-column">
+        <img src="pic.jpg" alt="Me" width="300" height="400" class="padded-image">
+    </div>
+    <div class="message-column">
+        <h2>About Me:</h2>
+        <p>Computer Science graduate with a keen interest in network security, database management, and cloud computing. Proficient in AWS for deploying applications and implementing security measures. Seeking career opportunities to leverage my skills in a dynamic work environment etc. etc. etc.</p>
+    </div>
+</div>
 
-        <div class="menu">
-            <b>
-                <h4>
+<nav>
+    <h2 id="Education">Education</h2>
+    <p>George Mason University Graduate of 2023 B.S in Computer Science</p>
 
-                    <a href="#Education">Education</a>
-                    <a href="#Projects">Projects</a>
-                    <a href="#Work Experience">Work Experience</a>
-                    <a href="#Other">Other</a>
-                </h4>
-            </b>
-        </div>
+    <h3>Certifications</h3>
+    <ul>
+        <li>AWS Cloud Practitioner (June 2023)</li>
+        <li>AWS Solutions Architect (July 2023)</li>
+        <li>CompTIA Security+ (March 2024)</li>
+        <li>CompTIA Network+ (Est. May 2024)</li>
+    </ul>
+</nav>
 
-        <header>
+<section>
+    <h2 id="Projects">Projects</h2>
 
-            <h1>Deepak Kumar</h1>
-        </header>
-        <body>
-            <div class="content">
-                <div class="image-column">
-                    <img src="pic.jpg" alt="Me" width="300" height="400" class="padded-image">
-                </div>
-                <div class="message-column">
-                    <h2>About Me:</h2>
-                    <p>
-                        Computer Science graduate with a keen interest in network security, database
-                        management, and cloud computing. Proficient in AWS for deploying applications
-                        and implementing security measures. Seeking career opportunities to leverage
-                        my skills in a dynamic work environment etc. etc. etc.
-                    </p>
-                </div>
-            </div>
-        </body>
-        
+    <h3>Current Project: Web-App Currency Converter</h3>
+    <ul>
+        <li>Created a dynamic website utilizing EC2 server running an Apache webserver.</li>
+        <li>Presents user with graph and a dropdown menu to choose currency requested.</li>
+        <li>Parses .json file for real-time updates on the exchange range market.</li>
+    </ul>
+    <img src="sample.gif" width="520px" height="300px" class="centered-image" alt="Currency Converter">
 
-        <nav>
-            <h2 id="Education">Education</h2>
+    <h3>Banking App</h3>
+    <ul>
+        <li>Designed the development of a desktop application enabling simulation of bank transactions such as deposits, withdrawals, and transfers among users. Implemented a secure user registration system with username, email, passwords and utilizing BCrypt to hash sensitive data.</li>
+        <li>Leveraged an agile workflow methodology in conjunction with Git versioning system to update and enhance applications.</li>
+        <li>Led the construction of a banking application hosted on AWS, encompassing the configuration of an AWS NoSQL database.</li>
+        <li>Implemented fuzz testing to subject code to various inputs to identify vulnerabilities.</li>
+    </ul>
 
-            George Mason University Graduate of 2023
-                            B.S in Computer Science
+    <h3>Message Encryptor</h3>
+    <ul>
+        <li>Desktop solution enabling users to securely send and receive messages through the generation of keys.</li>
+        <li>Storage of metadata to facilitate efficient search/retrieval of information.</li>
+        <li>Emphasized on the perseverance of data integrity and confidentiality through implementation of encryption and secure channels.</li>
+        <li>Constructed a back end solution using MongoDB to store messages alongside with keys for message retrieval.</li>
+    </ul>
+    <img src="MessageEncryptor.gif" width="400px" height="300px" class="centered-image" alt="Message Encryptor">
 
-            <h3>Certifications</h3>
+    <h3>DNS Resolver</h3>
+    <ul>
+        <li>Created a solution that has a similar functionality to nslookup in order to retrieve DNS type A records.</li>
+        <li>Generated packets in accordance to RFC 1035 to send to Google’s DNS server.</li>
+        <li>Structured a concise output of all records for a given subdomain.</li>
+    </ul>
+    <img src="nslookup.gif" width="400px" height="300px" class="centered-image" alt="DNS Resolver">
 
-            AWS Cloud Practicioner (June 2023)<br>
-            AWS Solutions Architect (July 2023)<br>
-            CompTIA Security+ (March 2024)<br>
-            CompTIA Network+ (Est. May 2024)<br><br><br>
+    <h3>AWS Web Hosting Security Project</h3>
+    <ul>
+        <li>Utilized AWS Route53 in order to register a domain name while creating an alias to point to an S3 bucket that stores static website content.</li>
+        <li>Employed bucket versioning to seamlessly update content.</li>
+    </ul>
 
+    <h3>Network Security Analysis</h3>
+    <ul>
+        <li>Configured Ubuntu Server and Kali Linux to simulate network environments for communication analysis.</li>
+        <li>Utilized WireShark to monitor traffic between the servers, identifying potential security vulnerabilities and malicious activity.</li>
+        <li>Utilized passive reconnaissance tools to gather information about the other Virtual Machine, allowing for the exploration of potential attack vectors and security weaknesses.</li>
+        <li>Used VirusTotal to conduct comprehensive file analysis, identifying security vulnerabilities and potential threats within files exchanged between the servers.</li>
+    </ul>
 
-        </nav>
+    <h3>S3 Bucket Transfer Project</h3>
+    <ul>
+        <li>Utilized python libraries in order to create, configure, and upload to S3 buckets.</li>
+        <li>Implemented encryption mechanisms such as SSE-S3 and KMS for data security.</li>
+    </ul>
 
-        <section>
-            <h2 id="Projects">Projects</h2>
+    <!-- Add more projects with descriptions as needed -->
+</section>
 
-            <h3>
-            Current Project: Web-App Currency Converter
-            </h3>
-            <li>
-                
-                Created a dynamic website utilizing EC2 server running an apache webserver.
-            </li>
-            <li>
-                Presents user with graph and a dropdown menu to choose currency requested
-            </li>
+<section>
+    <h2 id="WorkExperience">Work Experience</h2>
+    <!-- Work experience details -->
+</section>
 
-            
-            <li>
-                Parses .json file for real-time updates on the exchange range market.
-            </li>
-            <br>
-            <a>
-            <img src="sample.gif" width="520px" height="300px"  class="centered-image">
-            </a>
-            <h3>Banking App</h3>
-
-            <li>Designed the development of a desktop application enabling
-                                                        simulation of bank transactions such as deposits, withdrawals, and
-                                                        transfers among users. Implemented a secure user registration
-                                                        system with username, email, passwords and utilizing BCrypt to hash
-                                                        sensitive data.</li>
-
-            <li>Leveraged an agile workflow methodology in conjunction with Git
-                                                        versioning system to update and enhance applications.
-            </li>
-            <li>Led the construction of a banking application hosted on AWS,
-                                                        encompassing the configuration of an AWS NoSQL database.
-            </li>
-            <li>
-                Implemented fuzz testing to subject code to various inputs to identify
-                                                        vulnerabilities.
-            </li>
-
-
-            <h3>Message Encryptor</h3>
-
-            <li>
-                Desktop solution enabling users to securely send and receive
-                                messages through the generation of keys.</li>
-            <li>
-                Storage of metadata to facilitate efficient search/retrieval of
-                                information.</li>
-            <li>Emphasized on the perseverance of data integrity and confidentiality
-                                through implementation of encryption and secure channels.
-            </li>
-            <li>
-                Constructed a back end solution using MongoDB to store messages
-                                alongside with keys for message retrieval.
-                                
-            </li>
-
-        <br>
-     
-            <img src="MessageEncryptor.gif" width="400px" height="300px"  class="centered-image">
-
-
-            <h3>DNS Resolver</h3>
-
-
-            <li>
-                Created a solution that has a similar functionality to nslookup in
-                                order to retrieve DNS type A records.
-            </li>
-            <li>
-                Generated packets in accordance to RFC 1035 to send to Google’s
-                                DNS server.</li>
-            <li>
-                Structured a concise output of all records for a given subdomain
-            </li>
-            <br>
-            <img src="nslookup.gif" width="400px" height="300px"  class="centered-image">
-
-            <br>
-            <h3>
-                AWS Web Hosting Security Project
-            </h3>
-
-            <li>
-                Utilized AWS Route53 in order to register a domain name while
-                creating an alias to point to an S3 bucket that stores static website
-                content.
-            </li>
-            <li>
-                Employed bucket versioning to seamlessly update content.
-            </li>
-            <br><br>
-            <h3>Network Security Analysis</h3>
-
-            <li>
-                Configured Ubuntu Server and Kali Linux to simulate network
-                environments for communication analysis.
-            </li>
-            <li>
-                Utilized WireShark to monitor traffic between the servers, identifying
-                potential security vulnerabilities and malicious activity.
-            </li>
-            <li>
-                Utilized passive reconnaissance tools to gather information about the
-                other Virtual Machine, allowing for the exploration of potential attack
-                vectors and security weaknesses.
-            </li>
-            <li>
-                Used VirusTotal to conduct comprehensive file analysis, identifying
-                security vulnerabilities and potential threats within files exchanged
-                between the servers.
-            </li>
-
-            <br><br>
-            <h3>S3 Bucket Transfer Project</h3>
-            <br>
-
-            <li>
-                Utilized python libraries in order to create, configure, and upload to
-                S3 buckets.
-            </li>
-            <li>
-                Implemented encryption mechanisms such as SSE-S3 and KMS for
-                data security.
-            </li>
-
-         
-
-        </section>
-
-        <section>
-            <h2 id="Work Experience">Work Experience</h2>
-        </section>
-
-        <aside>
-            <h2 id="Topics of Interest">Other</h2>
-            <li>
-                OSI Model and Networking
-                <ul>
-                <li>
-                    Protocol Analysis
-                </li>
+<aside>
+    <h2 id="Other">Other</h2>
+    <ul>
+        <li>OSI Model and Networking
+            <ul>
+                <li>Protocol Analysis</li>
             </ul>
-            </li>
-            <li>
-                MITRE ATT&CK and NIST
-            </li>
-            <li> 
-                Cybersecurity Awareness
+        </li>
+        <li>MITRE ATT&CK and NIST</li>
+        <li>Cybersecurity Awareness</li>
+        <li>Cloud Architecture and Development</li>
+    </ul>
+</aside>
 
-            </li>
-            <li>
-                Cloud Architecture  and Development
-            </li>
-            
+<footer></footer>
 
-        </aside>
-
-        <footer></footer>
-
-    </body>
-
-    <body>
-        <div class="space">
-
-            <b>Deepak Kumar</b>
-        </div>
-    </body>
+</body>
 </html>
