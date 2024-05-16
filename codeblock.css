@@ -3,7 +3,7 @@
     padding: 20px;
     margin: 20px;
     background-color: #0d1117;
-    border-radius: 10px; /* Adjust border-radius to change the roundness */
+    border-radius: 10px; 
 }
 
 pre {
@@ -17,8 +17,8 @@ pre {
     align-items: center;
     font-family: Cambria, serif;
 
-    height: 75vh; /* Make the content fill the viewport height */
-    background-color: #FFFFFF; /* Add white background color */
+    height: 75vh; 
+    background-color: #FFFFFF; 
 }
 
 .image-column,
@@ -32,12 +32,12 @@ pre {
 }
 
 .image-column {
-    text-align: center; /* Center the image horizontally */
+    text-align: center;
 }
 
 .message-column {
-    max-width: 600px; /* Adjust the max width of the message */
-    text-align: left; /* Align text to the left */
+    max-width: 600px; 
+    text-align: left; 
 }
 
 
@@ -54,7 +54,7 @@ code {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 3em; /* Adjust width to fit line numbers */
+    width: 3em;
     padding: 20px 0;
     text-align: right;
     color: #6e7681;
