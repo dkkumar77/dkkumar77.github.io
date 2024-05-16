@@ -9,6 +9,38 @@
 pre {
     margin: 0;
 }
+.content {
+    display: flex;
+    
+    justify-content: center;
+
+    align-items: center;
+    font-family: Cambria, serif;
+
+    height: 75vh; /* Make the content fill the viewport height */
+    background-color: #FFFFFF; /* Add white background color */
+}
+
+.image-column,
+.message-column {
+    flex: 1;
+    font-size: 15px;
+    justify-content: center;
+    font-family: 'Fira Code', monospace;
+
+    padding: 20px;
+}
+
+.image-column {
+    text-align: center; /* Center the image horizontally */
+}
+
+.message-column {
+    max-width: 600px; /* Adjust the max width of the message */
+    text-align: left; /* Align text to the left */
+}
+
+
 
 code {
     font-family: 'Fira Code', monospace;
