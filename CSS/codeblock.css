@@ -1,0 +1,79 @@
+
+.code-container {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    background-color: #0d1117;
+    border-radius: 10px; 
+}
+
+pre {
+    margin: 0;
+}
+.content {
+    display: flex;
+    
+    justify-content: center;
+
+    align-items: center;
+    font-family: Cambria, serif;
+
+    height: 75vh; 
+    background-color: #FFFFFF; 
+}
+
+.image-column,
+.message-column {
+    flex: 1;
+    font-size: 15px;
+    justify-content: center;
+    font-family: 'Fira Code', monospace;
+
+    padding: 20px;
+}
+
+.image-column {
+    text-align: center;
+}
+
+.message-column {
+    max-width: 600px; 
+    text-align: left; 
+}
+
+
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c9d1d9;
+}
+
+.line-numbers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3em;
+    padding: 20px 0;
+    text-align: right;
+    color: #6e7681;
+    overflow: hidden;
+}
+
+.line-numbers span {
+    display: block;
+    padding-right: 10px;
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 1;
+}
