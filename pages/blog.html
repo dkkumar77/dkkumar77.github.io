@@ -213,8 +213,14 @@
         <b>DNS Header</b><br>
         <b>ID</b> - 16 bits (2 bytes) - This part of the header signifies a assigned number by the system that is creating the query, and is mirrored in the DNS response.<br>
        <b> QR</b> - 1 bit - This represents whether this message is a query or ar esponse.<br>
-        <b>Opcode</b> - 4 bits - Which type of query this is (0 is standard, 1 is inverse, 2 is server status).
-      
+        <b>Opcode</b> - 4 bits - Which type of query this is (0 is standard, 1 is inverse, 2 is server status).<br>
+        <b>AA TC RD RA</b> - 1 bit each - Authoriative Answer, bit will default at 0, if its an authoritative answer, the bit will be set.
+        TC signifies that the message has been truncated because the length is greater than the required length in the transmission
+        channel. RD and RA are the bits that exhibit whether or not recursion is used or can be used.<br>
+        <b>QDCOUNT, ANCOUNT, NSCOUNT, ARCOUNT </b> - 16 bits each - 
+        <br><br>
+        The Question section format is as listed:
+        <br><b>QName</b> -
 
     </section>
 
