@@ -125,7 +125,21 @@
             box-shadow: 0 2px 2px tan;
         }
 
-        .image-column,
+        .image-column{
+            flex: 1;
+            padding: 20px;
+            font-size: 15px;
+            justify-content: center;
+            font-family: 'Fira Code', monospace;
+            padding: 20px;
+            padding-bottom: 40px;
+            max-width: 600px; 
+            margin: auto; 
+            border-radius: 10px;
+            overflow-wrap: break-word; 
+            
+        }
+
         .message-column {
             flex: 1;
             padding: 20px;
@@ -167,8 +181,8 @@
             padding: 20px;
             padding-top: 20px;
             font-size: 12.5pt;
+            border-radius: 30px;
             background-color: white;
-            border-radius: 20px;
             text-align: left;
             box-shadow: 0px 4px 2px -2px tan;
          }
@@ -203,16 +217,16 @@
     <h1>Deepak Kumar </h1>
 </header>
 
+
 <div class="content">
     <div class="image-column">
-        <img src="/images/pic.jpg" alt="Me" width="300" height="400" class="padded-image">
+        <img src="/images/pic.jpg" alt="Me" width="300" height="400" style="border-radius: 100px;" class="padded-image">
     </div>
     <div class="message-column">
         <h2>About Me:</h2>
-        <p>Computer Science graduate with a keen interest in network security, database management, and cloud computing. Proficient in AWS for deploying applications and implementing security measures. Seeking career opportunities to leverage my skills in a dynamic work environment etc. etc. etc.</p>
+        <p><span id="typed-output"></span></p>
     </div>
 </div>
-
 <nav>
     <h2 id="Education">Education</h2>
     <p>George Mason University Graduate of 2023 B.S in Computer Science</p>
@@ -303,6 +317,9 @@
         
     </ul>
 </aside>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
 
 <footer>
     &copy; 2024 Deepak Kumar. All rights reserved.
