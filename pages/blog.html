@@ -245,7 +245,17 @@
     </section>
 
     <section>
-        <h2 id="Post 3"> _____</h2>
+        <h2 id="Tautologies"> Tautologies for Fun</h2>
+        <ol>
+            <code>[ (p &rarr; q) &rarr; (p &rarr; (p &and; q)) ]</code><br><br>
+            <li><code>[ p &rarr; q ]</code> (Assumption)</li>
+            <li><code>[ p ]</code> (Assumption)</li>
+            <li><code>[ q ]</code> (modus ponens 1, 2)</li>
+            <li><code>[ p &and; q ]</code> (&and; introduction 2, 3)</li>
+            <li><code>[ p &rarr; (p &and; q) ]</code> (&rarr; introduction 2, 4)</li>
+            <li><code>[ (p &rarr; q) &rarr; (p &rarr; (p &and; q)) ]</code> (&rarr; introduction 1, 5)</li>
+        </ol>
+        
     </section>
 
     <section>
