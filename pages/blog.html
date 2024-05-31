@@ -230,15 +230,15 @@
         <p><br></p>
         <p>Example:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
         <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18</strong></p>
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\</strong></p>
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \</strong></p>
         <p><strong>10(A) &nbsp; &nbsp; &nbsp; &nbsp; 8(Internal Node)</strong></p>
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4(B) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 (C)</strong></p>
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp;  \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4(B) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 (C)</strong></p>
         <p><br>In this example, 10 will be set to bit 0.<br>The internal node will be set to 1<br>The 4(B) value will be set to 0.<br>The 4(C) value will be set to 1.</p>
         <p>Adjusted Example:</p>
         <p>&nbsp; &nbsp; &nbsp;<strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18</strong></p>
         <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\</strong></p>
         <p><strong>(0)10(A) &nbsp; &nbsp; &nbsp; &nbsp;(1) 8(Internal Node)</strong></p>
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( 0) 4(B) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(1) 4(C)</strong></p>
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp;  \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( 0) 4(B) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(1) 4(C)</strong></p>
         <br><br><p><strong>Now lastly, let's say we have the letters &quot;ABAAC&quot;?</strong><br>We know that:<br>A = 0<br>B = 10<br>C = 11<br><strong>Therefore, to translate &quot;ABAAC&quot;, we can deduce that the Huffman encoding will be:</strong><br>A = 0 || B = 10 || A = 0 || A = 0 || C == 11<br>The final product then becomes:<br><strong>0100011</strong></p>
     </br>
 
