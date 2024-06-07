@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         typeSpeed: 5, // Removed leading zero
         backSpeed: 60,
         backDelay: 2000,
-        loop: true,
+        loop: false,
     });
 });
