@@ -177,7 +177,7 @@
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#toi">INTERESTS</a></li>
             <li><a href="#goals">GOALS</a></li>
-            <li><a href="/index.html">V1</a></li>
+            <li><a href="index.html">V1</a></li>
         </ul>
     </div>
 
@@ -196,9 +196,9 @@
         
 
        <div class="icon-row">
-        <img src="../Images/li.jpg" alt="Linkedin">
-        <img src="../Images/fb.jpg" alt="Facebook">
-        <img src="../Images/gh.jpg" alt="Github">
+        <img src="/Images/li.jpg" alt="Linkedin">
+        <img src="/Images/fb.jpg" alt="Facebook">
+        <img src="/Images/gh.jpg" alt="Github">
     </div>
         </div>
     <div class="content" id="education">
@@ -275,6 +275,9 @@
 <script>
     document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href') === 'index.html') {
+                return;}
+
             e.preventDefault();
 
             const sectionId = this.getAttribute('href').substring(1);
@@ -285,5 +288,8 @@
             });
         });
     });
+</script>
+
+
 </script>
 </body>
