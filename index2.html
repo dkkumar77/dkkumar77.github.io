@@ -1,188 +1,281 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepak</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&display=swap">
-</head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(228, 224, 224);
+            padding: 0;
+        }
+
+        .icon-row {
+
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .icon-row img {
+            width: 40px; 
+            height: 40px; 
+            margin: 0 10px; 
+        }
+
+        .message {
+            height: 300px;
+        }
+        .sidebar {
+            width: 225px;
+            height: 100vh;
+            background-color: rgb(195, 90, 53);
+            color: white;
+            box-sizing: border-box;
+            position: fixed;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            
+        }
+
+        .sidebar img.sidebar-pic {
+            width: 140px; 
+            height: 140px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            border: 8px solid rgb(227, 134, 100);
+            margin-bottom: 20px; 
+            margin-left: 5px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: rgb(227, 134, 100);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            color: #fff;
+        }
+
+        @font-face {
+            font-family: 'MuseoModerno';
+            src: url('path/to/MuseoModerno-Light.woff2') format('woff2'),
+                url('path/to/MuseoModerno-Light.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
 
 
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: rgb(228, 224, 224);
-    padding: 0;
+
+        .content2 {
+            height: fit-content;
+            max-height: 100vh;
+            min-height: 50vh;
+            font-size: 20pt;
+            margin-bottom: 100px;
+            font-family: 'MuseoModerno', sans-serif;
+            font-weight: bolder;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 225px;
+        }
+
+        .error {
+            height: fit-content;
+            min-height: 10vh;
+            font-size: 30pt;
+            font-family: 'MuseoModerno', sans-serif;
+            color: rgb(169, 36, 36);
+            font-weight: bolder;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 225px;
+        }
+
+        .content h1{
+            font-size: 25pt;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        .name {
+            height: 10vh;
+
+            font-size: 70pt;
+            font-family: 'MuseoModerno', sans-serif;
+            color: rgb(195, 90, 53);
+            font-weight: bolder;
+            padding-top: 100;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 225px;
+        }
+
+        .content {
+            height: fit-content;
+            min-height: 100vh;
+            font-size: 13pt;
+            font-family: 'MuseoModerno', sans-serif;
+            color: grey;
+            font-weight: bolder;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 225px;
+        }
+
+
+.prev-slide {
+    left: -50px; 
+    border-radius: 3px 0 0 3px;
+}
+
+.next-slide {
+    right: -50px;
+    border-radius: 0 3px 3px 0;
 }
 
 
-.icon-row {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 20px;
-}
 
-.icon-row img {
-    width: 40px; 
-    height: 40px; 
-    margin: 0 10px; 
-}
-
-.sidebar {
-    width: 225px;
-    height: 100vh;
-    background-color: rgb(195, 90, 53);
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
     color: white;
-    box-sizing: border-box;
-    position: fixed;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebar img.sidebar-pic {
-    width: 140px; 
-    height: 140px; 
-   
-    object-fit: cover; 
-    border-radius: 50%; 
-    border: 8px solid rgb(227, 134, 100);
-    margin-bottom: 20px; 
-    margin-left: 5px;
-}
-
-
-
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    color:  rgb(227, 134, 100);
     font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 10; 
+}
+
+.prev {
+    left: -50px; 
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: -50px; 
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-container {
+    position: relative;
+    max-height: 90vh;
+    height: 80vh;
+    min-width: 80%;
+    max-width: 70%; 
+    margin: auto;
+    border: 2px  rgb(195, 90, 53);
+    background-color: rgb(245, 236, 236);
+    box-shadow: 0px 1px 1px 1px rgb(231, 156, 156);
+    border-radius: 100px;
+    overflow: hidden; 
+}
+
+.inside-container{
+    max-height: 40vh;
+}
+.mySlides {
+    display: none;
+    font-size: 15pt;
+    max-height: 20vh;
+    margin: 50px;
     text-align: center;
-    text-decoration: none;
 }
 
-.sidebar ul li a:hover {
-    color: #fff;
+.fade {
+    animation-name: fade;
+    animation-duration: .5s;
 }
 
-
-
-@font-face {
-  font-family: 'MuseoModerno';
-  src: url('path/to/MuseoModerno-Light.woff2') format('woff2'),
-       url('path/to/MuseoModerno-Light.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
-.content2 {
-    height: fit-content;
-    min-height: 50vh;
-    font-size:  20pt;
-    margin-bottom: 100px;
-    font-family: 'MuseoModerno', sans-serif;
-    color: grey;
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(169, 36, 36);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: gray;
+}
+
+.dots-container {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+}
+    </style>
     
-        font-weight: bolder;
-
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 225px;
-}
-
-
-.error{
-    height: fit-content;
-    min-height: 10vh;
-    font-size:  30pt;
-    font-family: 'MuseoModerno', sans-serif;
-        color: rgb(169, 36, 36);
-    
-    font-weight: bolder;
-
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 225px;
-
-}
-
-.name{
-    height: 10vh;
-    font-size:  50pt;
-    font-family: 'MuseoModerno', sans-serif;
-        color: rgb(195, 90, 53);
-    
-        font-weight: bolder;
-
-    padding-top: 100;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 225px;
-    
-}
-.content {
-    height: fit-content;
-    min-height: 100vh;
-    font-size:  13pt;
-    font-family: 'MuseoModerno', sans-serif;
-        color: grey;
-    
-        font-weight: bolder;
-
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 225px;
-}
-
-
-
-
-
-</style>
-
-
+</head>
 <body>
+
+
     <div class="sidebar">
         <div class="padding"></div>
+
+    
         <img src="/images/pic.jpg" alt="Sidebar Image" class="sidebar-pic">
         <ul>
             <li><a href="#error">ABOUT ME</a></li>
-            
+            <li><a href="#projects">PROJECTS</a></li>
 
             <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#toi">INTERESTS</a></li>
             <li><a href="#goals">GOALS</a></li>
             <li><a href="index.html">V1</a></li>
         </ul>
     </div>
-
     <div class="error" id="error">
-        <p> [ Website under construction.. ]<br> Please rollback to Website V1 </p>
         
         
     </div>
@@ -192,15 +285,98 @@
     </div>
 
     <div class="content2" id="about">
-        <p><span id="typed-output" ></span></p>
-        
-
-       <div class="icon-row">
-        <img src="/images/li.jpg" alt="Linkedin">
-        <img src="/images/fb.jpg" alt="Facebook">
-        <img src="/images/gh.jpg" alt="Github">
-    </div>
+        <div class="message">
+            <div class="ide-container">
+                <p><span id="typed-output"></span></p>
+    
+            </div>
         </div>
+ 
+
+        <div class="icon-row">
+            <a href="https://www.linkedin.com/in/dkkumar77"><img src="/images/li.jpg" alt="Linkedin"></a>
+            <a href="https://www.github.com/dkkumar77/"><img src="/images/gh.jpg" alt="Linkedin"></a>
+            
+        </div>
+    </div>
+     
+    <div class="content" id="projects">
+        <h1>PROJECTS</h1>
+        <div class="slideshow-container">
+
+   <div class="mySlides fade">
+                <img src="/images/exchange_watch.gif" width="520px" height="300px" class="centered-image" alt="Currency Converter">
+
+                <h3>Web-App Currency Converter</h3>
+                <ul>
+                    <li>Created a dynamic website utilizing EC2 server running an Apache webserver.</li>
+                    <li>Presents user with graph and a dropdown menu to choose currency requested.</li>
+                    <li>Parses .json file for real-time updates on the exchange range market.</li>
+                </ul>
+                        </div>
+         
+            <div class="mySlides fade">
+                <h3><mark></mark>  Compression Application</h3>    <ul>
+                    <li>Utilizing Burrows-Wheeler and Huffman Encoding to create a compression application
+                     which aims to compress files by 40%.</li>
+                    <li>Processed and compressed files up to 500 MB, demonstrating scalability and robustness.</li>
+              
+             
+                 </ul>
+             
+            </div>
+            
+            <div class="mySlides fade">
+
+                <br><br>
+                <img src="/images/patriotbank.png" width="520px" height="300px" class="centered-image" alt="Currency Converter">
+
+                <h3>Banking App</h3>
+            </div>
+            <div class="mySlides fade">
+                <img src="/images/MessageEncryptor.gif" width="400px" height="300px" class="centered-image" alt="Message Encryptor">
+
+                <h3>Message Encrypter</h3>
+                <ul>
+                    Desktop solution enabling users to securely send and receive messages through the generation of keys.
+                    Storage of metadata to facilitate efficient search/retrieval of information.
+                    Emphasized on the perseverance of data integrity and confidentiality through implementation of encryption and secure channels.
+                    Constructed a back end solution using MongoDB to store messages alongside with keys for message retrieval.
+                </ul>
+            
+            </div>
+            <div class="mySlides fade">
+                <h3>DNS Resolver</h3>
+            </div>
+            <div class="mySlides fade">
+                <h3>AWS Web Hosting Security Project</h3>
+            </div>
+            <div class="mySlides fade">
+                <h3>Network Security Analysis</h3>
+            </div>
+            <div class="mySlides fade">
+                <h3>S3 Bucket Transfer Project</h3>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots-container">
+            <a class="prev-slide" onclick="plusSlides(-1)">&#10094;</a>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <a class="next-slide" onclick="plusSlides(1)">&#10095;</a>
+       
+        </div>
+    </div>
+
     <div class="content" id="education">
         <h1>Education</h1>
 
@@ -215,38 +391,6 @@
             <li>CompTIA Network+ (Est. June 2024)</li>
         </ul>
             </div>
-    <div class="content" id="projects">
-
-        <h1>Projects</h1>
-        <h3><mark>[ Current Project ]</mark> - Compression Application</h3>    
-     
-     
-     
-     
-     
-     
-         <h3>Web-App Currency Converter</h3>
-   
-     
-         <h3>Banking App</h3>
-      
-     
-         <h3>Message Encryptor</h3>
-        
-     
-         <h3>DNS Resolver</h3>
-      
-     
-         <h3>AWS Web Hosting Security Project</h3>
-       
-     
-         <h3>Network Security Analysis</h3>
-      
-     
-         <h3>S3 Bucket Transfer Project</h3>
-     
-    </div>
-
 
     <div class="content" id="toi">
         <h1>Interests</h1>
@@ -268,28 +412,108 @@
             </div>
 
 
-    
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="script.js"></script>
 
 <script>
-    document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href') === 'index.html') {
-                return;}
 
-            e.preventDefault();
+function smoothScroll(target, duration) {
+    var targetElement = document.querySelector(target);
+    var targetPosition = targetElement.offsetTop;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
 
-            const sectionId = this.getAttribute('href').substring(1);
-            const section = document.getElementById(sectionId);
-            window.scrollTo({
-                behavior: 'smooth',
-                top: section.offsetTop
-            });
-        });
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var target = this.getAttribute('href');
+        var duration = 1000; // Scroll duration in milliseconds
+
+        smoothScroll(target, duration);
+    });
+});
+
+document.addEventListener('wheel', function(event) {
+    event.preventDefault();
+
+    var delta = Math.sign(event.deltaY);
+    var currentSection = null;
+    var sections = document.querySelectorAll('.section');
+    
+    sections.forEach(section => {
+        if (section.offsetTop <= window.scrollY + window.innerHeight / 2) {
+            currentSection = section;
+        }
+    });
+
+    var nextSection = delta > 0 ? currentSection.nextElementSibling : currentSection.previousElementSibling;
+    
+    if (nextSection) {
+        var target = '#' + nextSection.id;
+        var duration = 800;
+        smoothScroll(target, duration);
+    }
+});
+</script>
+
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "javascript"
     });
 </script>
 
 
-</script>
+
 </body>
+</html>
