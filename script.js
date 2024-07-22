@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     var typed = new Typed('#typed-output', {
         strings: [
-            "Computer Science graduate with a keen interest in network security, database management, and cloud computing. Proficient in AWS for deploying applications and implementing security measures. Seeking career opportunities to leverage my skills in a dynamic work environment etc. etc. etc.",
+
+         
+
+
+            "Network Engineer Enthusiast  <br> AWS Enthusiast <br><br>I am an aspiring Network and System Administrator with a deep passion for the tech industry. With an innate affinity for technology, I am dedicated to expanding my skillset and solidifying my understanding of advanced and evolving topics in the field",
         ],
-        typeSpeed: 5, // Removed leading zero
+        typeSpeed: 5, 
         backSpeed: 60,
         backDelay: 2000,
         loop: false,
