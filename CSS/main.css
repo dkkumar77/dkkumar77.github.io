@@ -1,0 +1,275 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(228, 224, 224);
+    padding: 0;
+}
+
+.icon-row {
+
+    display: flex;
+    justify-content: left;
+    padding-top: 100px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-row img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.message {
+    height: 300px;
+}
+
+.play-regular {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.play-bold {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.sidebar {
+    width: 225px;
+    height: 100vh;
+    background-color: rgb(195, 90, 53);
+    color: white;
+    box-sizing: border-box;
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.sidebar img.sidebar-pic {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgb(227, 134, 100);
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: rgb(227, 134, 100);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('path/to/MuseoModerno-Light.woff2') format('woff2'), url('path/to/MuseoModerno-Light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.content2 {
+    height: fit-content;
+    max-height: 100vh;
+    color: rgb(175, 84, 68);
+    height: 70vh;
+    background-color: rgb(228, 224, 224);
+    border: 1px solid rgb(213, 208, 208);
+    box-shadow: 10px, 10px, 10px black 20in;
+
+    font-size: 20pt;
+    margin-bottom: 100px;
+    font-family: "Play", sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 225px;
+}
+
+.error {
+    height: fit-content;
+    min-height: 10vh;
+    font-size: 30pt;
+    font-family: 'MuseoModerno', sans-serif;
+    color: rgb(169, 36, 36);
+    font-weight: bolder;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 225px;
+}
+
+.content h1 {
+    font-size: 25pt;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.name {
+    height: 0;
+    text-align: center;
+    font-size: 70pt;
+
+    font-family: 'MuseoModerno', sans-serif;
+    color: rgb(179, 76, 38);
+    font-weight: bolder;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 225px;
+}
+
+.content {
+    height: fit-content;
+    min-height: 100vh;
+    font-size: 13pt;
+    font-family: 'MuseoModerno', sans-serif;
+    color: grey;
+    font-weight: bolder;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 225px;
+}
+
+
+.prev-slide {
+    left: -50px;
+    border-radius: 3px 0 0 3px;
+}
+
+.next-slide {
+    right: -50px;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: -50px;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-container {
+    position: relative;
+    max-height: 90vh;
+    height: 85vh;
+    min-width: 80%;
+    max-width: 70%;
+    margin: auto;
+    border: 2px rgb(195, 90, 53);
+    background-color: rgb(245, 236, 236);
+    box-shadow: 0 1px 1px 1px rgb(231, 156, 156);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.slideshow-container:hover {
+    background-color: rgb(240, 236, 236);
+}
+.inside-container {
+    max-height: 40vh;
+}
+.mySlides {
+    display: none;
+    font-size: 15pt;
+    max-height: 20vh;
+    margin: 50px;
+    text-align: center;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 40px;
+    margin: 0 px;
+    background-color: rgb(169, 36, 36);
+    border-radius: 20%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: gray;
+}
+
+.dots-container {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+}
